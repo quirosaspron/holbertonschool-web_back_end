@@ -4,4 +4,4 @@
 
 def floor(n: float) -> int:
     """Floors a number"""
-    return n//1
+    return int(n//1)
