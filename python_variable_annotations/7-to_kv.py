@@ -3,6 +3,6 @@
 from typing import Union
 
 
-def sum_mixed_list(k: str, v: Union[int, float]) -> tuple:
+def to_kv(k: str, v: Union[int, float]) -> tuple:
     """Takes a str and num, outputs tuple"""
     return (k, float(v*v))
