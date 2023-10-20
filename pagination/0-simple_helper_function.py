@@ -1,15 +1,21 @@
 #!/usr/bin/env python3
-""" Pagination """
-
+""" Range simple helper fun """
 from typing import Tuple
 
 
 def index_range(page: int, page_size: int) -> Tuple[int, int]:
-    """ returns tuple of size two containing a start index and an end index """
-    if page < 1 or page_size < 1:
-        return None
+    """
+        Range of the page
 
-    start_index = (page - 1) * page_size
-    end_index = start_index + page_size - 1
+        Args:
+            page: Current page
+            page_size: Total size of the page
 
-    return (start_index, end_index)
+        Return:
+            tuple with the range start and end size page
+    """
+
+    final_size: int = page * page_size
+    start_size: int = final_size - page_size
+
+    return (start_size, final_size)
